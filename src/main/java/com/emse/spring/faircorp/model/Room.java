@@ -18,10 +18,10 @@ public class Room {
     private String name;
 
     @Column(nullable=true)
-    private double currentTemperature;
+    private Double currentTemperature;
 
    @Column(nullable=true)
-    private double targetTemperature;
+    private Double targetTemperature;
 
     @OneToMany(mappedBy = "room",fetch = FetchType.LAZY)
     private List<Heater> heaters;
@@ -64,19 +64,19 @@ public class Room {
         this.name = name;
     }
 
-    public double getCurremtTemperature() {
+    public Double getCurremtTemperature() {
         return currentTemperature;
     }
 
-    public void setCurremtTemperature(double curremtTemperature) {
+    public void setCurremtTemperature(Double curremtTemperature) {
         curremtTemperature = curremtTemperature;
     }
 
-    public double getTargetTemperature() {
+    public Double getTargetTemperature() {
         return targetTemperature;
     }
 
-    public void setTargetTemperature(double targetTemperature) {
+    public void setTargetTemperature(Double targetTemperature) {
         targetTemperature = targetTemperature;
     }
 
